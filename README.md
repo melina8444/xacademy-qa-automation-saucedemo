@@ -94,7 +94,7 @@ README.md
 
 **Melina Yangüez**
 
-Analista en Sistemas | QA Automation Trainee
+Analista en Sistemas | QA Automation 
 
 ---
 
