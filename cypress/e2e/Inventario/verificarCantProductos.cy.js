@@ -9,6 +9,14 @@ describe('Inventario - Verificar cantidad de productos', () => {
     })
 
     it('Verificar cantidad de productos', () => {
-        cy.get('[data-test="inventory_item_name"]').should('have.length', 6) // Verifico que hay 6 productos en el inventario
+        cy.get('[data-test="inventory-item-name"]').should('have.length', 6) // Verifico que hay 6 productos en el inventario
+        
+        //verifico scroll hacia abajo
+        cy.scrollTo('bottom')
+        cy.get('[data-test="footer"]').should('be.visible')
+        
+        //verifico scroll hacia arriba
+        cy.scrollTo('top')
+        cy.get('.app_logo').should('be.visible')
     })
 })

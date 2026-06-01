@@ -1,9 +1,12 @@
 describe('Página Principal - checkout',()=>{
     
+    beforeEach(() => {
+        cy.visit('https://www.saucedemo.com/')
+    })
    
      // Prueba de login exitoso con ID de los elementos
     it('Completar compra de un producto exitosamente', () => {
-        cy.visit('https://www.saucedemo.com/')
+        // cy.visit('https://www.saucedemo.com/')
         cy.get('#user-name').type('standard_user') // Ingreso el nombre de usuario
         cy.get('#password').type('secret_sauce') // Ingreso la contraseña
         cy.get('#login-button').click() // Hago clic en el botón de Login
