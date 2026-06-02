@@ -1,10 +1,11 @@
 describe('pagina principal',()=>{
          // Prueba de login exitoso con ID de los elementos
     it('Mostrar error al dejar vacío el campo Postal Code', () => {
-        cy.visit('https://www.saucedemo.com/')
-        cy.get('#user-name').type('problem_user') // Ingreso el nombre de usuario
-        cy.get('#password').type('secret_sauce') // Ingreso la contraseña
-        cy.get('#login-button').click() // Hago clic en el botón de Login
+        // cy.visit('https://www.saucedemo.com/')
+        // cy.get('#user-name').type('problem_user') // Ingreso el nombre de usuario
+        // cy.get('#password').type('secret_sauce') // Ingreso la contraseña
+        // cy.get('#login-button').click() // Hago clic en el botón de Login
+        cy.login('problem_user', 'secret_sauce')//utilizo el commands "login"
         cy.url().should('include', '/inventory.html')
 
     //=================================
